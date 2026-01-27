@@ -9,7 +9,9 @@ export default function Home() {
 
   const [email, setEmail] = useState('');
 
+  // event handler
   const handleSubscribe = () => {
+    console.log("here:", JSON.stringify({ email }));
     fetch('/api/subscribe', {
       method: 'POST',
       body: JSON.stringify({ email }),
@@ -25,6 +27,7 @@ export default function Home() {
       setEmail('');
     })
   }
+
 
 
   return (
@@ -50,10 +53,11 @@ export default function Home() {
             Discover the latest news and insights in the world of AI. Stay updated with the latest developments and trends in artificial intelligence.
           </p>
         </div>
-
+      
         {/* input and subscribe button */}
         <div className='text-center flex items-center justify-center gap-4'>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}  placeholder='Enter your email' className='w-full max-w-md p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500' />
+
           <button onClick={handleSubscribe} className="bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-color">Subscribe</button>
         </div>
 
