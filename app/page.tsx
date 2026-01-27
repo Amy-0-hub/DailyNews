@@ -11,21 +11,6 @@ export default function Home() {
 
   // event handler
   const handleSubscribe = () => {
-    console.log("here:", JSON.stringify({ email }));
-    fetch('/api/subscribe', {
-      method: 'POST',
-      body: JSON.stringify({ email }),
-    }).then(res => res.json()).then(data => {
-      if (data.error) {
-        toast.error(data.error);
-      } else {
-        toast.success('Subscribed Successfully')
-      }
-    }).catch(err => {
-      toast.error('Failed to subscribe')
-    }).finally(() => {
-      setEmail('');
-    })
   }
 
 
@@ -56,9 +41,6 @@ export default function Home() {
       
         {/* input and subscribe button */}
         <div className='text-center flex items-center justify-center gap-4'>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}  placeholder='Enter your email' className='w-full max-w-md p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500' />
-
-          <button onClick={handleSubscribe} className="bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-color">Subscribe</button>
         </div>
 
         {/* cards */}
