@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     // // 2. add account to contact list
     const { error: addError } = await resend.contacts.segments.add({
         email: email,
-        segmentId: '4b9a3a1f-d1c6-4ef5-8692-5f1d29558bd4',
+        segmentId: '0a78ac32-2782-42f3-a0b7-7e5169f1baaa',
     })
     if (addError) {
         return NextResponse.json({ error: addError.message }, { status: 500 });
