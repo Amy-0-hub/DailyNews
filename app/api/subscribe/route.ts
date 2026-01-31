@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
     const { email } = await request.json(); 
-    console.log(email); // xx@qq.com
+    console.log(email);
     
     const resend = new Resend(process.env.RESEND_API_KEY);
     // save to contact list
@@ -25,5 +25,5 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: addError.message }, { status: 500 })
     }
 
-    return NextResponse.json('ok', { status: 200 })
+    return NextResponse.json({ message: 'Subscribed successfully'}, { status: 200 })
 }

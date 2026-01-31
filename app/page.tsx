@@ -20,7 +20,7 @@ export default function Home() {
       } else {
         toast.success('Subscribed successfully')
       }
-    }).catch(err => {
+    }).catch(error => {
       toast.error('Failed to subscribe');
     }).finally(() => {
       setEmail('')
