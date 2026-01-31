@@ -132,7 +132,7 @@ export function formatNewsSummary(newsItems: NewsItem[]): {
         📰 Daily News Summary
       </h1>
       <p style="color: #666; font-size: 14px;">
-        ${new Date().toLocaleDateString('zh-CN', { 
+        ${new Date().toLocaleDateString('en-US', { 
           year: 'numeric', 
           month: 'long', 
           day: 'numeric',
@@ -164,7 +164,7 @@ export function formatNewsSummary(newsItems: NewsItem[]): {
           ` : ''}
           ${item.pubDate ? `
             <p style="color: #999; font-size: 12px; margin: 5px 0;">
-              📅 ${new Date(item.pubDate).toLocaleString('zh-CN')}
+              📅 ${new Date(item.pubDate).toLocaleString('en-US')}
             </p>
           ` : ''}
           <a href="${item.link}" style="color: #007bff; text-decoration: none; font-size: 14px;">
