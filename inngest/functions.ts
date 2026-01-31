@@ -15,7 +15,7 @@ export const helloWorld = inngest.createFunction(
 export const sendDailyNews = inngest.createFunction(
   { id: 'send-daily-news' },
   // { event: 'test/send.daily.news' },
-  { cron : '0 9 * * *' },
+  { cron : '27 7 * * *' },
   async ({ event, step }) => {
     // await step.sleep('wait-a-moment', '1s');
     // return { message: `Daily news send to ${event.data.email}!` };
