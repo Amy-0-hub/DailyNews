@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Project Flowchart
+
+Here is a visual representation of the project workflow:
+
+![Project Flowchart](./image/flowchart.png)
+
 ## Getting Started
 
 First, run the development server:
