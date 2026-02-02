@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Here is a visual representation of the project workflow:
 
-![Project Flowchart](./image/flowchart.png)
+![Project Flowchart](./image/flowchart.jpg)
 
 ## Getting Started
 
